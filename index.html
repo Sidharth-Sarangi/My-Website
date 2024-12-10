@@ -83,6 +83,25 @@
         footer p {
             margin: 0;
         }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .biography {
+                max-width: 90%; /* Use 90% of the screen width on small devices */
+                margin: 0 auto; /* Center the text */
+                font-size: 1rem; /* Slightly adjust the font size for readability */
+                line-height: 1.6; /* Maintain good readability */
+            }
+            section h2 {
+                font-size: 1.8rem; /* Slightly reduce heading size on smaller screens */
+            }
+            header h1 {
+                font-size: 2rem; /* Adjust the header title size */
+            }
+            header p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
