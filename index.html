@@ -1,148 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidharth Sarangi</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        a {
-            color: #239de9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidharth Sarangi | Guitarist, Pianist & Composer</title>
+<meta name="description" content="Official website of Sidharth Sarangi, international prize-winning guitarist, pianist, and composer from India. Discover his biography, performances, videos, and contact information.">
 
-        /* Header */
-        header {
-            background-color: #471111;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-        /* Section */
-        section {
-            padding: 2rem;
-            background-color: #8a3335; /* Germanium color */
-        }
-        section h2 {
-            font-size: 2rem;
-            text-align: center;
-            color: white;
-        }
-        .biography {
-            max-width: 50%;
-            margin: 0 auto;
-            text-align: justify;
-            line-height: 1.6;
-            color: white;
-        }
+<style>
+/* ===== Reset & Base ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto', sans-serif; background:#fdfaf5; color:#222; scroll-behavior:smooth; line-height:1.6; }
+a { text-decoration:none; color:inherit; }
+h1,h2,h3 { font-family:'Montserrat', serif; }
 
-        /* Image */
-        img {
-            display: block;
-            margin: 2rem auto;
-            max-width: 100%;
-            border-radius: 8px;
-        }
+/* ===== Navbar ===== */
+nav { position:fixed; top:0; width:100%; background:rgba(245,239,228,0.95); display:flex; justify-content:space-between; align-items:center; padding:1rem 5%; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+nav .logo { font-weight:700; font-size:1.5rem; }
+nav ul { display:flex; gap:2rem; list-style:none; }
+nav ul li a { font-weight:500; transition:color 0.3s; }
+nav ul li a:hover, nav ul li a.active { color:#8a3335; }
 
-        /* Social Media Links */
-        .videos, .contact, .social-links {
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .social-links a {
-            margin: 0 1rem;
-            font-size: 1.2rem;
-            display: inline-block;
-        }
+/* ===== Header / Hero ===== */
+header { display:flex; flex-direction:column; justify-content:center; align-items:center; height:90vh; background:linear-gradient(135deg,#fdfaf5,#eee3d1); text-align:center; padding-top:4rem; }
+header img { width:300px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.2); transition:transform 0.3s; margin-bottom:2rem; }
+header img:hover { transform:scale(1.03); }
+header h1 { font-size:3rem; color:#471111; margin-bottom:0.5rem; }
+header p { font-size:1.3rem; color:#8a3335; }
 
-        /* Footer */
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        footer p {
-            margin: 0;
-        }
+/* ===== Sections ===== */
+section { padding:6rem 2rem; max-width:1000px; margin:auto; }
+section h2 { font-size:2.5rem; text-align:center; color:#471111; margin-bottom:2rem; }
 
-        /* Responsive Design for Mobile */
-        @media (max-width: 768px) {
-            .biography {
-                max-width: 90%; /* Use 90% of the screen width on small devices */
-                margin: 0 auto; /* Center the text */
-                font-size: 1rem; /* Slightly adjust the font size for readability */
-                line-height: 1.6; /* Maintain good readability */
-            }
-            section h2 {
-                font-size: 1.8rem; /* Slightly reduce heading size on smaller screens */
-            }
-            header h1 {
-                font-size: 2rem; /* Adjust the header title size */
-            }
-            header p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+/* Biography */
+.biography { font-size:1.1rem; text-align:justify; margin-bottom:2rem; }
+
+/* Flex / Buttons */
+.flex-center { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-top:2rem; }
+.btn { display:inline-block; background:#471111; color:#fff; padding:0.75rem 1.5rem; border-radius:50px; font-weight:bold; transition:all 0.3s ease; box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+.btn:hover { background:#8a3335; transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,0.3); }
+
+/* YouTube Video Gallery */
+.video-gallery { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center; margin-top:2rem; }
+.video-gallery iframe { width:360px; height:215px; border-radius:8px; box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+
+/* Compositions / Concerts */
+.list { margin-top:2rem; font-size:1.1rem; line-height:1.8; }
+.list li { margin-bottom:0.8rem; }
+
+/* Contact */
+.contact { text-align:center; margin-top:3rem; font-size:1.1rem; }
+
+/* Footer */
+footer { background:#471111; color:#fdfaf5; text-align:center; padding:2rem; font-size:0.9rem; }
+
+/* Responsive */
+@media(max-width:768px){
+  header h1{ font-size:2rem; } 
+  header p{ font-size:1rem; }
+  section h2{ font-size:2rem; }
+  .video-gallery iframe{ width:100%; height:auto; aspect-ratio:16/9; }
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Sidharth Sarangi</h1>
-        <p>Guitarist, Pianist & Composer</p>
-    </header>
-    <section>
-        <h2>Biography</h2>
-        <div class="biography">
-            <p>
-                Sidharth Sarangi is a classical guitarist, pianist and composer from Odisha, India.<br><br>
-                He has won prizes at several national and international competitions, including first prize at the Global Guitar Gita International Guitar Festival and Competition, where he was awarded the Grand Prize. He has also received awards at the Calcutta International Classical Guitar Festival and Competition, as well as various other national competitions.
 
-              
-                <br><br> In 2022, he became the first person from India to have been accepted to study guitar at the Royal College of Music in London.
-                <br><br>Sidharth’s repertoire consists of eclectic and diverse pieces ranging from original arrangements of suites by Bach to modern music by composers such as Gary Ryan, Leo Brouwer, Pavel Steidl and Frederic Rzewski. His affinity for avant garde pieces is evident in his transcriptions and interpretations of pieces by modern composers.
+<!-- Navbar -->
+<nav>
+  <div class="logo">Sidharth Sarangi</div>
+  <ul>
+    <li><a href="#biography">Biography</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#compositions">Compositions</a></li>
+    <li><a href="#concerts">Upcoming Concerts</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-                <br><br>Sidharth has performed extensively across India. Highlights include recitals at the India International Centre in New Delhi, National Centre for the Performing Arts in Mumbai, Rajasthan International Centre in Jaipur, Bangalore International Centre, Satyajit Ray Auditorium (ICCR) in Calcutta, the Cottage Chamber Concert series in Mysore, Galeria de Belas Artes in Goa, etc. Sidharth's music has also been featured on prominent international platforms such as NPR Music. He was invited to perform on The Great American Folk Show where his performance was broadcast live on Prairie Public radio in North Dakota.
-                <br><br>Beyond performance, Sidharth is actively involved in pedagogy, conducting workshops and masterclasses to promote the classical guitar repertoire among other guitarists and musicians.
-                <br><br> Sidharth also composes and arranges music from time to time and has written pieces for the solo guitar and piano repertoire.
+<!-- Header / Hero -->
+<header>
+  <img src="NCPA.png" alt="Sidharth Sarangi performing at NCPA">
+  <h1>Sidharth Sarangi</h1>
+  <p>Guitarist, Pianist & Composer</p>
+</header>
 
-                <br><br> Sidharth is currently pursuing an undergraduate degree in electronics engineering and enjoys swimming in his free time.
-        </div>
-        <img src="NCPA.png" alt="Sidharth Sarangi at NCPA">
-        <div class="videos">
-            <h2>Videos</h2>
-            <a href="https://www.youtube.com/@Sid_music" target="_blank" title="My Youtube Channel">YouTube</a>
-        </div>
-        <div class="social-links">
-            <h3>Follow</h3>
-            <a href="https://www.instagram.com/sidharthsarangimusic" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=61567262020807" target="_blank">Facebook</a>
-        </div>
-        <div class="contact">
-            <h3>Contact</h3>
-            <p>omm.sidharth@gmail.com</p>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 Sidharth Sarangi. All rights reserved.</p>
-    </footer>
+<!-- Biography -->
+<section id="biography">
+  <h2>Biography</h2>
+  <div class="biography">
+    <p>
+      Sidharth Sarangi is a classical guitarist, pianist and composer from Odisha, India. He has won prizes at several national and international competitions, including first prize at the Global Guitar Gita International Guitar Festival and Competition. In 2022, he became the first person from India to be accepted at the Royal College of Music, London. His repertoire ranges from Bach suites to modern composers like Gary Ryan, Leo Brouwer, Pavel Steidl, and Frederic Rzewski. He has performed extensively across India and internationally, and his music has been featured on NPR Music and The Great American Folk Show.
+    </p>
+  </div>
+</section>
+
+<!-- Portfolio / YouTube -->
+<section id="portfolio">
+  <h2>Selected Performances</h2>
+  <div class="video-gallery">
+    <iframe src="https://www.youtube.com/embed/GKKnrlE52zA" title="YouTube video 1" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/gK26d9IkJm8" title="YouTube video 2" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/YC3eAsP5COc" title="YouTube video 3" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- Compositions -->
+<section id="compositions">
+  <h2>Compositions</h2>
+  <ul class="list">
+    <li>Original piece for solo guitar: [Title]</li>
+    <li>Piano composition: [Title]</li>
+    <li>Arrangement of modern works for guitar ensemble: [Title]</li>
+  </ul>
+</section>
+
+<!-- Upcoming Concerts -->
+<section id="concerts">
+  <h2>Upcoming Concerts</h2>
+  <ul class="list">
+    <li>Oct 15, 2025 – National Centre for the Performing Arts, Mumbai</li>
+    <li>Nov 10, 2025 – India International Centre, New Delhi</li>
+    <li>Dec 05, 2025 – Bangalore International Centre, Bangalore</li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="flex-center">
+    <a href="mailto:omm.sidharth@gmail.com" class="btn">Email</a>
+    <a href="https://www.youtube.com/@Sid_music" target="_blank" class="btn">YouTube</a>
+    <a href="https://www.instagram.com/sidharthsarangimusic" target="_blank" class="btn">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61567262020807" target="_blank" class="btn">Facebook</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Sidharth Sarangi. All rights reserved.</p>
+</footer>
+
+<script>
+// Smooth scroll & active link highlight
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if(pageYOffset >= sectionTop){ current = section.getAttribute('id'); }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if(link.getAttribute('href') === '#' + current){ link.classList.add('active'); }
+  });
+});
+</script>
+
 </body>
 </html>
+
